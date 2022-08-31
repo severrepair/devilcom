@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/악마1.png" type="image/x-icon" />
+    <title>마왕컴</title>
+    <!-- 부트스트랩 css와 js를 링크 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        /* 네비게이션 3 css 네비게이션 3 글자색 검은색/ 마우스 올렸을때 백그라운드 연두색 글자는 청록색/클릭시 백그라운드 */
+        .nav3 a {
+            color: black;
+        }
+
+        .nav3 a:hover,
+        .nav3 a:focus {
+            background-color: #5bc419;
+            color: aqua;
+        }
+
+        .nav3 a:active {
+            background-color: red;
+        }
+
+        .main1 {
+            nav-left: auto;
+        }
+
+        .main3 {
+            white-space: pre-line;
+        }
+
+        .card-text {
+            height: 400px;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table,
+        td,
+        th {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        /* 테이블에 마우스 가져다대면 이미지 겉 색이 변함 */
+        td:hover {
+            background-color: blue;
+        }
+
+        /* 푸터  유튜브 보고함 https://www.youtube.com/watch?v=8FZ2YqnbH0w&list=PL4UVBBIc6giL7ygRa-P7UExEKqZgx4t9K&index=32*/
+        .footer {
+            text-align: center;
+            padding: 30px 50px;
+        }
+
+        .footer li {
+            position: relative;
+            display: inline;
+            padding: 0 7px 0 10px;
+            white-space: nowrap;
+        }
+
+        .footer li::before {
+            width: 1px;
+            height: 12px;
+            background-color: #dbdbdb;
+        }
+
+        .footer li:first-child::before {
+            width: 0;
+        }
+
+        .footer address {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+
+<html>
+
+<body>
+
+
+    <header>
+
+        <div class="nav1">
+            <!-- 상단 리스트1-->
+            <nav class="navbar navbar-expand-md navbar-light bg-white">
+                <div class="container-fluid" style="height: 5px; font-size: small;">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav fw-bold ms-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">로그인</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">회원가입</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">마이페이지</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">장바구니</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">고객센터</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- 상단 리스트2 로우를 줘서 검색창 길이를 맞추었다. -->
+        <div class="nav2">
+            <div class="row">
+                <nav class="navbar navbar-expand-md navbar-light bg-white">
+                    <div class="container-fluid">
+                        <div class="col-3">
+                            <a class="navbar-brand" href="#" style="font-size: 80px;">마왕컴</a>
+                        </div>
+                        <!-- 검색창 -->
+                        <div class="col-5">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="검색창" aria-label="검색창"
+                                    aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">검색</button>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="collapse navbar-collapse">
+                                <ul class="navbar-nav fw-bold ms-auto" style="font-size: smaller;">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">배송조회</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">사용후기</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">이벤트</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">고객문의</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <hr>
+        <!-- 상단 리스트3 부트스트랩 네비게이션 수직정렬, 네브필을 주어서 네브바의 가로를 전부 사용함 -->
+        <div class="nav3">
+            <ul class="nav justify-content-center nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">전체카테고리</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">이번달 베스트 상품</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">이번달 특가상품</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PC 설치방법</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">주문한 상품보기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">1:1 견적상담</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+    <hr>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/악마1.png" type="image/x-icon" />
+  <title>마왕컴</title>
+  <!-- 부트스트랩 css와 js를 링크 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    /* 네비게이션 3 css 네비게이션 3 글자색 검은색/ 마우스 올렸을때 백그라운드 연두색 글자는 청록색/클릭시 백그라운드 */
+    .nav3 a {
+      color: black;
+    }
+
+    .nav3 a:hover,
+    .nav3 a:focus {
+      background-color: black;
+      color: white;
+    }
+
+    .nav3 a:active {
+      background-color: red;
+    }
+
+    /* 메인1 캐러셀 and 네비 */
+    .main1 a {
+      color: black;
+    }
+
+    .main1 a:hover,
+    .main1 a:focus {
+      background-color: black;
+      color: white;
+    }
+
+    /* 메인2 이미지 호버 */
+    .img-fluid:hover {
+      background-color: black;
+    }
+
+    /* 메인3 */
+    .main3 {
+      white-space: pre-line;
+    }
+
+    .card-text {
+      height: 300px;
+    }
+
+    /* 메인4 */
+    table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    table,
+    td,
+    th {
+      border-collapse: collapse;
+      border: 1px solid rgba(0, 0, 0, 0.453);
+    }
+
+    /* 테이블 바디에 마우스 가져다대면 이미지 겉 색이 변함 */
+    td:hover {
+      background-color: blue;
+    }
+
+    /* 푸터  유튜브 참고 https://www.youtube.com/watch?v=8FZ2YqnbH0w&list=PL4UVBBIc6giL7ygRa-P7UExEKqZgx4t9K&index=32*/
+    .footer {
+      text-align: center;
+      padding: 30px 50px;
+    }
+
+    .footer a {
+      color: black;
+    }
+
+    .footer li {
+      position: relative;
+      display: inline;
+      padding: 0 7px 0 10px;
+      white-space: nowrap;
+    }
+
+    .footer li::before {
+      width: 1px;
+      height: 12px;
+      background-color: #dbdbdb;
+    }
+
+    .footer li:first-child::before {
+      width: 0;
+    }
+
+    .footer address {
+      padding-top: 15px;
+    }
+  </style>
+</head>
+
+<html>
+
+<body>
+
+
+  <header>
+
+    <div class="nav1">
+      <!-- 상단 리스트1-->
+      <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <div class="container-fluid" style="height: 5px; font-size: small;">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav fw-bold ms-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">로그인</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">회원가입</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">마이페이지</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">장바구니</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">고객센터</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 상단 리스트2 로우 즉 그리드를 줘서 검색창 길이를 맞추었다. -->
+    <div class="nav2">
+      <div class="row">
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+          <div class="container-fluid">
+            <div class="col-3">
+              <a class="navbar-brand" href="#" style="font-size: 80px;">마왕컴</a>
+            </div>
+            <!-- 검색창 -->
+            <div class="col-5">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="검색창" aria-label="검색창"
+                  aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">검색</button>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="collapse navbar-collapse">
+                <ul class="navbar-nav fw-bold ms-auto" style="font-size: smaller;">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">배송조회</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">사용후기</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">이벤트</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">고객문의</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <hr>
+    <!-- 상단 리스트3 부트스트랩 네비게이션 수직정렬, 네브필을 주어서 네브바의 가로를 전부 사용함 -->
+    <div class="nav3">
+      <ul class="nav justify-content-center nav-fill">
+        <li class="nav-item">
+          <a class="nav-link" href="#">전체카테고리</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">이번달 베스트 상품</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">이번달 특가상품</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">PC 설치방법</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">주문한 상품보기</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">1:1 견적상담</a>
+        </li>
+      </ul>
+    </div>
+
+  </header>
+  <hr>
+
+  <main>
+    <!-- 메인메뉴 -->
+    <section>
+      <!-- 메인1 그리드를 이용해 내비게이션과 캐러셀을 정렬 -->
+      <!-- 네비게이션이 왼쪽에 와야되니 케러셀 보다 위에 온다. -->
+      <div class="main1">
+        <div class="container mx-auto py-1">
+          <div class="row">
+            <div class="col-2">
+              <nav class="nav flex-column">
+                <a class="nav-link active" aria-current="page" href="#">인터넷/사무용</a>
+                <a class="nav-link" href="#">3D게임/그래픽용</a>
+                <a class="nav-link" href="#">고성능/전문가용</a>
+                <a class="nav-link" href="#">GAME ZONE</a>
+                <a class="nav-link" href="#">하이엔드 컴퓨터</a>
+                <a class="nav-link" href="#">컴퓨터 주요부품</a>
+                <a class="nav-link" href="#">주변기기</a>
+              </nav>
+            </div>
+            <div class="col-10">
+              <div id="carouselExample" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <!-- 캐러셀 크기조절 (25단위로만됨) 마진 오른쪽왼쪽 자동으로 맞추기 -->
+                <div class="carousel-inner mx-auto w-25">
+                  <div class=" carousel-item active" data-bs-interval="2000">
+                    <img src="img/main1 캐러셀 이미지/조립1.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/main1 캐러셀 이미지/조립2.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/main1 캐러셀 이미지/조립3.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/main1 캐러셀 이미지/조립4.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/main1 캐러셀 이미지/조립5.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/main1 캐러셀 이미지/조립6.jpg" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/main1 캐러셀 이미지/조립7.jpg" class="d-block" alt="...">
+                  </div>
+                </div>
+                <!-- 컨트롤 버튼 좌우 -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">이전</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">다음</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <hr>
+    <!-- 메인메뉴2 이미지 그리드 정렬 컨테이너 text-center 하니 컨테이너 안에 있는것들이 모두 가운데정렬이됨-->
+    <!-- 이미지 크기를 모두 245x300로 맞춤 -->
+    <section class="bg-white py-1">
+      <div class="main2">
+        <div class="container text-center">
+          <div class="text-dark text-center">
+            <h2 class="fw-bolder text-uppercase">기본상품</h2>
+            <p>원하시는 종류의 컴퓨터를 골라주세요.</p>
+          </div>
+
+          <div class="row pb-5">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <a href="메인2사무용.html">
+                <img src="img/main2/가정용.gif" alt="" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <a href="메인2pc방고사양.html">
+                <img src="img/main2/pc방 고사양.gif" alt="" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <a href="메인2게이밍.html">
+                <img src="img/main2/게이밍PC.gif" alt="" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <a href="메인2게이밍모니터패키지.html">
+                <img src="img/main2/게이밍 모니터패키지.gif" alt="" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <a href="메인2고사양게이밍.html">
+                <img src="img/main2/고사양 게이밍PC.gif" alt="" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <a href="메인2하이엔드.html">
+                <img src="img/main2/하이엔드PC.gif" alt="" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    <!-- 메인메뉴3 이미지 카드 그리드 텍스트 크기를 그림판으로 조정및 css로 조절하여 y축을 맞춤 -->
+    <div class="main3">
+      <section class="container">
+        <div class="text-center py-1">
+          <h2 class="fw-bolder text-uppercase">프리미엄전용PC</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="img/main3/배그.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center">배틀그라운드</h5>
+                <p class="card-text">
+                  권장사양
+                  OS: Windows 7 64-bit
+
+                  CPU: intel Core i5-6600K, AMD Ryzen 5 1600 이상
+
+                  램: 16GB 이상
+
+                  하드: 30GB 이상 사용 가능 공간
+
+                  그래픽: nVidia GeForce GTX 1060 3GB, AMD Radeon RX 580 4GB 이상
+                </p>
+                <div class="card-footer bg-transparent border-danger">
+                  <a href="메인3배틀그라운드.html" class="btn btn-outline-danger">견적바로가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="img/main3/발로란트.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center">발로란트</h5>
+                <p class="card-text">
+                  권장사양
+                  OS: Windows 7/8/10 64-bit
+
+                  CPU: Intel i3-4150 이상
+
+                  램: 4GB 이상
+
+                  하드: 20GB 이상
+
+                  그래픽: Geforce GT 730 이상
+                </p>
+                <div class="card-footer bg-transparent border-warning">
+                  <a href="메인3발로란트.html" class="btn btn-outline-warning">견적바로가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="img/main3/로스트아크.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center">로스트아크</h5>
+                <p class="card-text">
+                  권장사양
+                  OS: Windows 10권장 (Windows 7 sp1 이상 지원, 64bit 운영체제만 지원)
+
+                  CPU: Intel i5이상 / Ryzen 5이상
+
+                  램: 16GB 이상
+
+                  하드: 50GB 이상
+
+                  그래픽: NVIDIA GeForce GTX 1050 AMD Radeon RX560 2G 이상
+                </p>
+                <div class="card-footer bg-transparent border-success">
+                  <a href="메인3로스트아크.html" class="btn btn-outline-success">견적바로가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="img/main3/리그오브레전드.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center">리그오브레전드</h5>
+                <p class="card-text">
+                  권장사양
+                  OS: Windows XP SP3 이상, Windows Vista, Windows 7, Windows 8 또는 Windows 10 정품
+
+                  CPU: CPU 3GHz 이상
+
+                  램: 4GB 이상
+
+                  하드: 12GB 이상
+
+                  그래픽: GeForce 8800 또는 동급 그래픽 카드 이상(512MB 이상 비디오 메모리, 전용 GPU가 적용된)
+                </p>
+                <div class="card-footer bg-transparent border-primary">
+                  <a href="메인3리그오브레전드.html" class="btn btn-outline-primary">견적바로가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="img/main3/커스텀PC.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center">영상편집,방송,커스텀PC</h5>
+                <p class="card-text">
+                  원하시는 최고사양의 컴퓨터를 최소가격으로 맞추어 드리겠습니다.
+                </p>
+                <div class="card-footer bg-transparent border-secondary">
+                  <a href="메인3영상편집,방송,커스텀PC.html" class="btn btn-outline-secondary">견적바로가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="img/main3/피파온라인4.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center">피파온라인4</h5>
+                <p class="card-text">
+                  권장사양
+                  OS: Windows 7/8/8.1/10 - 64-Bit / Android 버전 2.3.3 이상 / iOS 버전 7.0 이상
+
+                  CPU: Intel i5-2550K @ 3.4Ghz (or AMD FX-6350 Six-Core equivalent) 이상
+
+                  램: 8GB 이상
+
+                  하드: 18GB 이상
+
+                  그래픽: NVIDIA GeForce GTX 460, AMD Radeon HD 6870 이상
+                </p>
+                <div class="card-footer bg-transparent border-info">
+                  <a href="메인3피파온라인4.html" class="btn btn-outline-info">견적바로가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <hr>
+
+    <!-- https://hianna.tistory.com/503 -->
+    <!-- css할때 클래스 설정으로 묶은게 아닌 테이블 그자체만을 css했다. -->
+    <!-- hover 유튜브 보고했음 -->
+    <div class="main4">
+      <div class="text-center py-2">
+        <h2 class="fw-bolder text-uppercase">컴퓨터 부품</h2>
+      </div>
+
+      <table border="1">
+        <thead>
+          <tr align="center">
+            <th>모니터</th>
+            <th>마우스키보드</th>
+            <th>cpu</th>
+            <th>메모리</th>
+            <th>저장장치</th>
+            <th>메인보드</th>
+            <th>그래픽카드</th>
+            <th>음향장치</th>
+            <th>케이스</th>
+            <th>파워</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr align="center">
+            <td>
+              <a href="메인4모니터.html">
+                <img src="img/logos/모니터.jpg" alt="">
+              </a>
+            </td>
+            <td>
+              <a href="메인4마우스키보드.html">
+                <img src="img/logos/마우스키보드.jpg" alt="">
+              </a>
+            </td>
+            <td>
+              <a href="메인4CPU.html">
+                <img src="img/logos/CPU.jpg" alt="">
+              </a>
+            </td>
+            <td>
+
+              <a href="메인4메모리.html">
+                <img src="img/logos/메모리.jpg" alt="">
+              </a>
+            </td>
+            <td>
+              <a href="메인4저장장치.html">
+                <img src="img/logos/SSD.jpg" alt="">
+              </a>
+            </td>
+            <td>
+              <a href="메인4메인보드.html">
+                <img src="img/logos/메인보드.jpg" alt="">
+              </a>
+            </td>
+            <td>
+              <a href="메인4그래픽카드.html">
+                <img src="img/logos/그래픽카드.jpg" alt="">
+              </a>
+            </td>
+            <td>
+              <a href="메인4음향장치.html">
+                <img src="img/logos/음향장치.jpg" alt="">
+              </a>
+            </td>
+            <td>
+              <a href="메인4케이스.html">
+                <img src="img/logos/케이스.jpg" alt="">
+              </a>
+            </td>
+            <td>
+              <a href="메인4파워.html">
+                <img src="img/logos/파워.jpg" alt="">
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+  </main>
+
+  <hr>
+
+  <!-- Footer 마무리 -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer">
+          <div>
+            <h1>마왕컴</h1>
+          </div>
+          <ul>
+            <li><a href="index.html">사이트 도움말</a></li>
+            <li><a href="features.html">사이트 이용약관</a></li>
+            <li><a href="docs.html">사이트 운영원칙</a></li>
+            <li><a href="docs.html">개인정보취급방침</a></li>
+            <li><a href="docs.html">책임의 한계와 법적고지</a></li>
+            <li><a href="docs.html">A/S 서비스</a></li>
+            <li><a href="docs.html">고객센터</a></li>
+          </ul>
+          <address>
+            Copyright &copy; 2022
+            <a href=""><strong>Website</strong></a>
+            All Rights Reserved.
+          </address>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
